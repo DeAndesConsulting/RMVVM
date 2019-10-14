@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RelevaMVVM.Views.RelevamientoPage"
+            xmlns:local="clr-namespace:RelevaMVVM.Views"
+            Title="Relevamiento"
+            BackgroundColor="#FFECA9">
+    <!--Pages can be added as references or inline-->
+    <TabbedPage.ToolbarItems>
+        <ToolbarItem Name="Finalizar" Order="Primary" Icon="Microsoft.png" Text="Finalizar" Priority="0" />
+        <ToolbarItem Name="Cancelar" Order="Primary" Icon="Microsoft.png" Text="Cancelar" Priority="0" />
+    </TabbedPage.ToolbarItems>
+    <local:GaseosasPage></local:GaseosasPage>
+    <local:AguasPage></local:AguasPage>
+    <local:SaborizadasPage></local:SaborizadasPage>
+    <local:JugosPage></local:JugosPage>
+    <local:SodasPage></local:SodasPage>
+    <local:FernetPage></local:FernetPage>
+</TabbedPage>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RelevaMVVM.Views.PrincipalPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="{Binding}"  HorizontalOptions="Center"/>
+            <Button x:Name="BtnRelevamiento1"  Text="Relevamiento" Command="{Binding RelevamientoCommand}" BackgroundColor="#355667" BorderColor="Gray" BorderWidth="3" BorderRadius="6"/>
+            <Button x:Name="BtnEstado" Text="Estado de ...." BackgroundColor="#355667" BorderColor="Gray" BorderWidth="1" BorderRadius="6"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

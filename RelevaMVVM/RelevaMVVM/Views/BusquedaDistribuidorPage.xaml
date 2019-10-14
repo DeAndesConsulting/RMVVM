@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RelevaMVVM.Views.BusquedaDistribuidorPage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Start">
+            <SearchBar Placeholder="ID o Nombre"  Text="{Binding SearchedText, Mode=TwoWay}"/>
+            <ListView x:Name="DistribuidorList" SeparatorColor="White" 
+                        ItemsSource="{Binding Items}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
+                      IsVisible="{Binding ListVisible}">
+                    <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Label Text="{Binding FormattedText}" FontSize="Medium"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <StackLayout x:Name="DatosDistribuidor" IsVisible="{Binding StackVisible}">
+                <Label x:Name="LblNombreFantasia" Text="{Binding SelectedItem.Nombre}" FontSize="Medium"/>
+                <Label x:Name="LblCodigo" Text="{Binding SelectedItem.Id}" FontSize="Medium"/>
+                <Button x:Name="BtnSiguiente" Command="{Binding ComercioCommand}" Text="Siguiente" TextColor="Black"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

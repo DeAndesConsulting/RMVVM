@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RelevaMVVM.Views.LoginPage">
+    <ContentPage.Content>
+        <Grid>
+            <BoxView BackgroundColor="Black" Opacity="0.8"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Row="1">
+                    <Entry Placeholder="Usuario" PlaceholderColor="White" TextColor="#FFFFFF" Text="{Binding NombreUsuario}"/>
+                    <Label x:Name="lblusufail" TextColor="Red" FontSize="Small" IsVisible="False"/>
+                    <Entry Placeholder="Contraseña" IsPassword="True" PlaceholderColor="White" TextColor="#FFFFFF" Text="{Binding Password}"/>
+                    <Label x:Name="lblpwfail" TextColor="Red" FontSize="Small" IsVisible="False"/>
+                    <Label x:Name="txtFail" IsVisible="False" Text="Usuario o contraseña incorrectas!" TextColor="Red" HorizontalTextAlignment="Center" FontAttributes="Bold"></Label>
+                    <Label Text="{Binding NombreUsuario}"/>
+                    <Button Text="Ingresar" Command="{Binding LoginCommand}" BorderColor="Aqua" BorderWidth="1" BorderRadius="60"/>
+                    <Button Text="Ingresar" BorderColor="Aqua" BorderWidth="1" BorderRadius="60"/>
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
